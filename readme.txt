@@ -61,7 +61,7 @@ README - PROGRAM REKAP ABSENSI HARIAN
       - Jika keduanya kosong, hasilnya juga kosong.
       - Jika ada data, rumus ini akan menjumlahkan **Clock Out** dengan **Lembur** (dalam satuan jam) dan mengubahnya menjadi format waktu **hh:mm**.
 
-   --------------->     =IF(AND(C2="", D2=""), "", TEXT((C2 + D2)/24, "hh:mm"))  <-------------
+   --------------->     =IF(AND(C2="", D2=""), "", TEXT(((C2 + D2)/24 + IF(D2=0, 0, 1/24)), "hh:mm"))  <-------------
 
 
 =========================
